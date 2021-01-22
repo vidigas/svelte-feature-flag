@@ -1,0 +1,21 @@
+{
+  "name": "svelte-feature-flag",
+  "version": "1.0.0",
+  "description": "",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"svelte": "src/index.js",
+	"scripts": {
+			"build": "rollup -c",
+			"dev": "rollup -c -w"
+	},
+  "keywords": [],
+  "author": "vidigas",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.37.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.31.2"
+  }
+}
