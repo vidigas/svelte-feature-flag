@@ -50,8 +50,41 @@ Example:
 
   There are two ways one can use the feature flags.
 
-1: inside the ```html <script>``` tag in the javascript part.
+1: In the html using the FeatureFlag component.
 
+```html
+<script>
+import { FeatureFlag } from 'svelte-feature-flag';
+import flags from '../../flags.json';
 
-	
-	2: in the html itself.
+</script>
+
+<style></style>
+
+<FeatureFlag on="feature-a" {flags} >
+  <FeatureA />
+</FeatureFlag>
+```
+
+2: In the Javascript part using the FeatureFlagsHelper:
+
+```html
+<script>
+import {FeatureFlagsHelper } from 'svelte-feature-flag';
+import flags from '../../flags.json';
+
+function handleClick() {
+  if(FeatureFlagsHelper(flags).isFlagEnabled("feature-b")) {
+    alert("feature b enabled")
+  } else {
+    alert("feature b not enabled")
+  }
+}
+</script>
+
+<style></style>
+
+<button on:click={handleClick}>
+Click me
+</button>
+```
