@@ -1,6 +1,6 @@
 # SVELTE FEATURE FLAGS
 
-this module provides feature flags ( also known as feature toggle) functionality for svelte based apps.
+Feature flags ( also known as feature toggle) functionality for svelte based apps.
 
 ## Install
 
